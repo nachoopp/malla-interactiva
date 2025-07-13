@@ -1,0 +1,101 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Contenedor de la malla */
+.malla {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Semestres */
+.semestre {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px 10px 25px;
+  width: 230px;
+  min-height: 350px;
+}
+
+/* Título semestre */
+.semestre h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+}
+
+/* Ramos */
+.ramo {
+  background: #fff;
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 8px 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Checkbox estilo */
+.ramo label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* Cambia el color del texto cuando está tachado */
+.ramo.tachado label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Ramos bloqueados */
+.ramo.bloqueado {
+  background: #ddd;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Ramos bloqueados no permiten interacción */
+.ramo.bloqueado input {
+  pointer-events: none;
+}
+
+/* Colores pastel por semestre */
+.semestre-1 { background: #ffd6e8aa; } /* Rosado pastel */
+.semestre-2 { background: #ffe6cdaa; } /* Naranja pastel */
+.semestre-3 { background: #fff8b8aa; } /* Amarillo pastel */
+.semestre-4 { background: #c6f5dbaa; } /* Verde menta pastel */
+.semestre-5 { background: #c6ecf7aa; } /* Celeste pastel */
+.semestre-6 { background: #d7c6f7aa; } /* Lila pastel */
+
+/* Si querés agregar más semestres, seguí el patrón */
+
+/* Quita el estilo al checkbox para que se vea bonito */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
