@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Pedagogía Básica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Pedagogía en Educación Básica<br>
+    <span class="subtitulo">con mención en Lenguaje y Comunicación y Matemáticas</span>
+  </h1>
+
+  <div class="malla">
+
+    <!-- EJEMPLO DE SEMESTRE -->
+    <div class="semestre semestre-1">
+      <h2>1º Semestre</h2>
+
+      <div class="ramo" id="ramo-intro-cientifico">
+        <label>
+          <input type="checkbox" onchange="desbloquear(['ramo-fenomenos-bq','ramo-fenomenos-fa'])">
+          Introducción al pensamiento científico
+        </label>
+      </div>
+
+      <div class="ramo" id="ramo-desarrollo-numerico">
+        <label>
+          <input type="checkbox" onchange="desbloquear(['ramo-matematica-eb'])">
+          Desarrollo del pensamiento numérico
+        </label>
+      </div>
+
+      <div class="ramo" id="ramo-artistica">
+        <label>
+          <input type="checkbox" onchange="desbloquear(['ramo-proyecto-integrado','ramo-proyectos-artistica'])">
+          Educación Artística
+        </label>
+      </div>
+
+    </div>
+
+    <div class="semestre semestre-2">
+      <h2>2º Semestre</h2>
+
+      <div class="ramo bloqueado" id="ramo-fenomenos-bq">
+        <label>
+          <input type="checkbox" disabled onchange="desbloquear(['ramo-ecologia'])">
+          Fenómenos Biológicos y Químicos
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-fenomenos-fa">
+        <label>
+          <input type="checkbox" disabled onchange="desbloquear(['ramo-ecologia'])">
+          Fenómenos Físicos y Astronómicos
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-matematica-eb">
+        <label>
+          <input type="checkbox" disabled onchange="desbloquear(['ramo-razonamiento-datos','ramo-habilidades-matematicas','ramo-pensamiento-algebraico'])">
+          Enseñanza y Aprendizaje de la Matemática en la E.B.
+        </label>
+      </div>
+
+    </div>
+
+    <div class="semestre semestre-3">
+      <h2>3º Semestre</h2>
+
+      <div class="ramo bloqueado" id="ramo-ecologia">
+        <label>
+          <input type="checkbox" disabled>
+          Ecología y Educación Ambiental y Energética
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-razonamiento-datos">
+        <label>
+          <input type="checkbox" disabled>
+          Desarrollo del Razonamiento en Datos y Azar
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-habilidades-matematicas">
+        <label>
+          <input type="checkbox" disabled>
+          Desarrollo de Habilidades Matemáticas en el Aula
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-pensamiento-algebraico">
+        <label>
+          <input type="checkbox" disabled>
+          Desarrollo del Pensamiento Algebraico
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-proyecto-integrado">
+        <label>
+          <input type="checkbox" disabled>
+          Proyecto Integrado
+        </label>
+      </div>
+
+      <div class="ramo bloqueado" id="ramo-proyectos-artistica">
+        <label>
+          <input type="checkbox" disabled>
+          Proyectos en Educación Artística
+        </label>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
